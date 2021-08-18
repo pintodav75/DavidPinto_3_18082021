@@ -1,0 +1,20 @@
+/*Général*/
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.colorPrimaire {
+    color: #9356DC;
+}
+.colorSecondaire {
+    color: #FF79DA;
+}
+.colorTertiaire {
+    color: #99E2D0;
+}
+/*Logo*/
+.margLogo {
+    height: auto;
+    width: auto;
+}
