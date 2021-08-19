@@ -1,4 +1,7 @@
 /*Général*/
+html, body{
+    font-family: Roboto;
+}
 .flexCenter {
     display: flex;
     justify-content: center;
@@ -17,4 +20,25 @@
 .margLogo {
     height: auto;
     width: auto;
+}
+/*nav*/
+.nav {
+    margin-top: 10px;
+    height: 300px;
+    width: auto;
+    background-color: #F7F4F4 ;
+}
+.lieuNav {
+    height: 60px;
+    width: auto;
+    background-color: #E3E1E1;
+    display: flex;
+}
+.iconNav {
+    margin-top: 20px;
+    margin-left: 110px;
+}
+.margLieu {
+    margin-left: 18px;
+    margin-top: 20px;
 }
