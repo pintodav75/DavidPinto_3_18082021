@@ -1,3 +1,30 @@
+/*general*/
+html, body {
+  font-family: "Roboto", sans-serif;
+}
 
+.flexCentre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/*nav*/
+.reserver {
+  background-color: grey;
+  height: 350px;
+  width: auto;
+  margin-top: 10px;
+}
+.reserver .lieu {
+  background-color: blue;
+  height: 55px;
+  width: auto;
+  display: flex;
+}
 
 /*# sourceMappingURL=style.css.map */

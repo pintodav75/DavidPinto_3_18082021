@@ -1,0 +1,31 @@
+/*general*/
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
+$couleurPrimaire: #9356DC;
+$couleurSecondaire: #FF79DA;
+$couleurTertiaire: #99E2D0;
+
+.flexCentre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bold {
+    font-weight: bold;
+}
+/*nav*/
+.reserver {
+    background-color: grey;
+    height: 350px;
+    width: auto;
+    margin-top: 10px;
+    .lieu {
+        background-color: blue;
+        height: 55px;
+        width: auto;
+        display: flex;
+    }
+   
+}
