@@ -3,6 +3,10 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  height: 7300px;
+}
+
 .flexCentre {
   display: flex;
   justify-content: center;
@@ -45,15 +49,18 @@ html, body {
 .reserver .btnExplorer {
   width: 250px;
   height: 60px;
-  background-color: #9356DC;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   margin-left: 18%;
   margin-top: 10%;
   border-radius: 35px;
-  box-shadow: 1px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  opacity: 1;
 }
 .reserver .btnExplorer:hover {
-  background-color: #bc95e9;
+  opacity: 0.8;
   cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
 }
 .reserver .TextBtnExplorer {
   color: white;
@@ -61,9 +68,60 @@ html, body {
   height: 60px;
 }
 
+/* fonctionnement*/
 .fonctionnement {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.process {
+  width: 95%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.process__title {
+  margin: 0;
+}
+.process__step {
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  height: auto;
   width: auto;
-  height: 200px;
+  margin: 10px 20px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+}
+.process__step:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  background: white;
+}
+.process__number {
+  background-color: #9356DC;
+  color: white;
+  position: absolute;
+  padding: 3px 8px 3px 8px;
+  border-radius: 500px;
+  transform: translateX(-50%);
+}
+.process__icon {
+  color: #7E7E7E;
+  margin: 0 20px;
+}
+.process__steps {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
