@@ -1,10 +1,13 @@
 /*general*/
-html, body {
+body {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  background: #f6f6f6;
 }
 
-body {
-  height: 7300px;
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .flexCentre {
@@ -122,6 +125,109 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.restaurants {
+  margin: 0;
+  background: #f6f6f6;
+  padding: 10px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.restaurant__cartes {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding: 10px;
+}
+.restaurant__carte {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  border-radius: 20px;
+  transform: scale(1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.restaurant__carte-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #99e2d0;
+  top: 20px;
+  right: 20px;
+}
+.restaurant__carte-new p {
+  color: #1b6150;
+  padding: 10px 20px;
+  margin: 0;
+}
+.restaurant__carte:hover {
+  transition: 0.5s;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px 2px rgba(147, 86, 220, 0.6);
+}
+.restaurant__carte-image {
+  width: 100%;
+  height: 190px;
+}
+.restaurant__carte-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurant__block {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  border-radius: 0 0 20px 20px;
+}
+.restaurant__block-info {
+  color: black;
+  margin-left: 20px;
+}
+.restaurant__block-info > :first-child {
+  font-weight: 700;
+}
+.restaurant__block-hearth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  width: 30px;
+}
+.restaurant__block .heart {
+  width: 30px;
+  stroke-width: 30;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+}
+.restaurant__block .heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+}
+.restaurant__block .heart-empty {
+  width: 50px;
+  position: relative;
+}
+.restaurant__block .heart-empty:hover {
+  opacity: 0;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */
