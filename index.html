@@ -7,20 +7,24 @@
     <title>ohmyfood</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9a96f6212d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="flexCentre">
-        <a href="index.html"><img src="./Maquettes Ohmyfood/images/logo/ohmyfood.png" alt="logoOMF" height="30" width="180"></a>
+    <header>
+        <div class="header">
+            <a href="index.html"><h1 class="header__logo">ohmyfood</h1></a>
+        </div>
     </header>
+    <main>
     <nav class="reserver">
-       <div class="lieu flexCentre">
+       <div class="lieu">
            <i class="fixIcon fas fa-map-marker-alt "></i><span class="bold">Paris, Belleville</span>
        </div>
        <h1 class="titreReserver">Réservez le menu qui vous convient</h1>
        <h2 class="titreDecouvrez">Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
        <div class="btnExplorer">
-           <span class="TextBtnExplorer flexCentre">Explorer nos restaurants</span>
+           <span class="TextBtnExplorer">Explorer nos restaurants</span>
        </div>
     </nav>
     <section class="fonctionnement">
@@ -45,7 +49,6 @@
             </div>
           </div>
     </section>
-    <section class="restaurants">
         <section class="restaurants">
             <h2 class="restaurants__titre">Restaurants</h2>
             <div class="restaurant__cartes">
@@ -92,6 +95,156 @@
                     </div>
                 </div>
               </a>
+              <a href="">
+                <div class="restaurant__carte">
+                    <div class="restaurant__carte-image">
+                      <div class="restaurant__carte-new"><p>Nouveau</p></div>
+                      <img src="./Maquettes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                    </div>
+                    <div class="restaurant__block">
+                        <div class="restaurant__block-info">
+                            <div class="restaurant__block-nom">La note enchantée</div>
+                            <div class="restaurant__block-lieu">Charonne</div>
+                        </div>
+                        <div class="restaurant__block-hearth">
+                          <svg class="heart heart-full" viewBox="-20 0 550 550"  xml:space="preserve">
+                            <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                     c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                     c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                     s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                     C512,93.417,453.532,30,376,30z"/>
+                          <defs>
+                            <linearGradient id="text-fill">
+                                  <stop offset="0%" stop-color="#9356DC" />
+                                  <stop offset="100%" stop-color="#FF79DA" />
+                            </linearGradient>
+                          </defs>                                   
+                        </svg>
+                
+                        <svg class="heart heart-empty" viewBox="-20 0 550 550"  xml:space="preserve">
+                            <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                     c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                     c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                     s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                     C512,93.417,453.532,30,376,30z"/>
+                          <defs>
+                            <linearGradient>
+                                  <stop offset="0%" stop-color="#9356DC" />
+                                  <stop offset="100%" stop-color="#FF79DA" />
+                            </linearGradient>
+                          </defs>                                   
+                        </svg>
+                        </div>     
+                    </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="restaurant__carte">
+                    <div class="restaurant__carte-image">
+                      <img src="./Maquettes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
+                    </div>
+                    <div class="restaurant__block">
+                        <div class="restaurant__block-info">
+                            <div class="restaurant__block-nom">À la française</div>
+                            <div class="restaurant__block-lieu">Cité rouge</div>
+                        </div>
+                        <div class="restaurant__block-hearth">
+                          <svg class="heart heart-full" viewBox="-20 0 550 550"  xml:space="preserve">
+                            <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                     c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                     c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                     s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                     C512,93.417,453.532,30,376,30z"/>
+                          <defs>
+                            <linearGradient id="text-fill">
+                                  <stop offset="0%" stop-color="#9356DC" />
+                                  <stop offset="100%" stop-color="#FF79DA" />
+                            </linearGradient>
+                          </defs>                                   
+                        </svg>
+                
+                        <svg class="heart heart-empty" viewBox="-20 0 550 550"  xml:space="preserve">
+                            <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                     c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                     c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                     s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                     C512,93.417,453.532,30,376,30z"/>
+                          <defs>
+                            <linearGradient>
+                                  <stop offset="0%" stop-color="#9356DC" />
+                                  <stop offset="100%" stop-color="#FF79DA" />
+                            </linearGradient>
+                          </defs>                                   
+                        </svg>
+                        </div>     
+                    </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="restaurant__carte">
+                    <div class="restaurant__carte-image">
+                      <img src="./Maquettes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+                    </div>
+                    <div class="restaurant__block">
+                        <div class="restaurant__block-info">
+                            <div class="restaurant__block-nom">Le délice des sens</div>
+                            <div class="restaurant__block-lieu">Folie-Méricourt</div>
+                        </div>
+                        <div class="restaurant__block-hearth">
+                          <svg class="heart heart-full" viewBox="-20 0 550 550"  xml:space="preserve">
+                            <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                     c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                     c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                     s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                     C512,93.417,453.532,30,376,30z"/>
+                          <defs>
+                            <linearGradient id="text-fill">
+                                  <stop offset="0%" stop-color="#9356DC" />
+                                  <stop offset="100%" stop-color="#FF79DA" />
+                            </linearGradient>
+                          </defs>                                   
+                        </svg>
+                
+                        <svg class="heart heart-empty" viewBox="-20 0 550 550"  xml:space="preserve">
+                            <path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                                     c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
+                                     c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
+                                     s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
+                                     C512,93.417,453.532,30,376,30z"/>
+                          <defs>
+                            <linearGradient>
+                                  <stop offset="0%" stop-color="#9356DC" />
+                                  <stop offset="100%" stop-color="#FF79DA" />
+                            </linearGradient>
+                          </defs>                                   
+                        </svg>
+                        </div>     
+                    </div>
+                </div>
+              </a>
+              </div>
     </section>
+</main>
+<footer class="footer">
+    <div class="footer__bloc">
+      <div class="logo"><a href="index.html">ohmyfood</a></div>
+      <div class="footer__bloc-links">
+        <div class="footer__bloc-link">
+          <i class="fas fa-utensils"></i>
+          <h3 class="footer__bloc-link__title">Proposer un restaurant</h3>
+        </div>
+        <div class="footer__bloc-link">
+          <i class="fas fa-hands-helping"></i>
+          <h3 class="footer__bloc-link__title">Devenir partenaire</h3>
+        </div>
+        <div class="footer__bloc-link">
+          <h3 class="footer__bloc-link__title">Mentions légales</h3>
+        </div>
+        <div class="footer__bloc-link">
+          <h3 class="footer__bloc-link__title"><a href="mailto:contact@ohmyfood.com">Contact</a></h3>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

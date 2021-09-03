@@ -20,6 +20,12 @@ a {
     text-decoration: none;
     color: white;
 }
+.main {
+    margin: 0;
+    padding: 0;
+    @include flexbox-center;
+    flex-direction: column;
+}
 
 $couleurPrimaire: #9356DC;
 $couleurSecondaire: #FF79DA;
@@ -34,6 +40,19 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
 .bold {
     font-weight: bold;
 }
+/*header*/
+.header {
+    box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.20);
+    position: relative;
+    @include flexbox-center();
+    height: 60px;
+    width: 100%;
+    &__logo {
+        font-family: 'Shrikhand', cursive;
+        margin: 0;
+        color: black;
+    }
+}
 /*nav*/
 .reserver {
     .fixIcon {
@@ -47,7 +66,9 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
         background-color: rgb(226, 226, 226);
         height: 55px;
         width: auto;
-        display: flex;
+        @include flexbox-center();
+        margin-top: -9px;
+        border-top: transparent;
     }
     .titreReserver {
         width: 230px;
@@ -79,6 +100,7 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
         color: white;
         font-size: 18px;
         height: 60px;
+        @include flexbox-center();
     }
 }
 /* fonctionnement*/
@@ -89,10 +111,11 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
 }
 .process {
     width: 95%;
-    background-color: white;   
+    max-width: 1200px;
+    background-color: white;
+    padding: 0 ;   
     display: flex;
     flex-direction: column ;
-    margin-top: 20px;
     &__title {
         margin: 0;
     }
@@ -125,6 +148,7 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
         }
     &__steps {
         margin-top: 30px;
+        margin-bottom: 30px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -133,7 +157,7 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
 .restaurants {
     margin: 0;
     background: #f6f6f6;
-    padding: 10px;
+    padding: 20px;
     max-width: 1200px;
     @include flexbox-center;
     flex-direction: column;
@@ -145,8 +169,8 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
         grid-template-rows: repeat(4,1fr) ;
         grid-template-columns: 1fr;
         grid-gap: 20px;
-        padding: 10px;
-        
+        padding: 20px;
+        width: 90%;
     }
     &__carte {
         position: relative;
@@ -223,6 +247,47 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
             &:hover {
               opacity: 0;
               transition: 0.5s;
+            }
+        }
+    }
+}
+.footer {
+    width: 100%;
+    background-color: #353535;
+    @include flexbox-center;
+    &__bloc {
+        display: inline;
+        padding: 0 40px;
+        width: 100%;
+        max-width: 1200px;
+        & .logo {
+            font-family: 'Shrikhand', cursive;
+            color: white;
+            font-size: 20px;
+            padding: 15px 0;
+        }
+        &-links {
+            display: inline-flex;
+            flex-direction: column;
+            width: auto;
+        }
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            text-align: center;
+            color: white;
+            height: 30px;
+            cursor: pointer;
+            &:hover .footer__bloc-link__title {
+                text-decoration: underline;
+            }
+            & i {
+             margin-right: 7px;
+            }
+            &__title {
+                font-size: 16px;
+                font-weight: 400;
             }
         }
     }

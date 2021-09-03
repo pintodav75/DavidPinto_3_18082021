@@ -10,6 +10,15 @@ a {
   color: white;
 }
 
+.main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .flexCentre {
   display: flex;
   justify-content: center;
@@ -18,6 +27,22 @@ a {
 
 .bold {
   font-weight: bold;
+}
+
+/*header*/
+.header {
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+.header__logo {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  color: black;
 }
 
 /*nav*/
@@ -35,6 +60,10 @@ a {
   height: 55px;
   width: auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -9px;
+  border-top: transparent;
 }
 .reserver .titreReserver {
   width: 230px;
@@ -69,6 +98,9 @@ a {
   color: white;
   font-size: 18px;
   height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* fonctionnement*/
@@ -82,10 +114,11 @@ a {
 
 .process {
   width: 95%;
+  max-width: 1200px;
   background-color: white;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
 }
 .process__title {
   margin: 0;
@@ -122,6 +155,7 @@ a {
 }
 .process__steps {
   margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -130,7 +164,7 @@ a {
 .restaurants {
   margin: 0;
   background: #f6f6f6;
-  padding: 10px;
+  padding: 20px;
   max-width: 1200px;
   display: flex;
   justify-content: center;
@@ -144,7 +178,8 @@ a {
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: 1fr;
   grid-gap: 20px;
-  padding: 10px;
+  padding: 20px;
+  width: 90%;
 }
 .restaurant__carte {
   position: relative;
@@ -228,6 +263,50 @@ a {
 .restaurant__block .heart-empty:hover {
   opacity: 0;
   transition: 0.5s;
+}
+
+.footer {
+  width: 100%;
+  background-color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__bloc {
+  display: inline;
+  padding: 0 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+.footer__bloc .logo {
+  font-family: "Shrikhand", cursive;
+  color: white;
+  font-size: 20px;
+  padding: 15px 0;
+}
+.footer__bloc-links {
+  display: inline-flex;
+  flex-direction: column;
+  width: auto;
+}
+.footer__bloc-link {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  color: white;
+  height: 30px;
+  cursor: pointer;
+}
+.footer__bloc-link:hover .footer__bloc-link__title {
+  text-decoration: underline;
+}
+.footer__bloc-link i {
+  margin-right: 7px;
+}
+.footer__bloc-link__title {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */
