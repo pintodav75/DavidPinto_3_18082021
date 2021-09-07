@@ -5,16 +5,26 @@ body {
     background: #f6f6f6;
 }
 
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin button-hover {
     opacity: 0.8;
     cursor: pointer;
     transition: .3s;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);    
 }
-@mixin flexbox-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+@mixin button-style {
+    opacity: 1;
+    background: $gradient;
+    color: white;
+    padding: 0 20px;
+    border-radius: 200px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);  
 }
 $couleurPrimaire: #9356DC;
 $couleurSecondaire: #FF79DA;
@@ -40,14 +50,49 @@ a {
     font-weight: bold;
 }
 /*spinner*/
-
-
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: black;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+  
 /*header*/
 .header {
     box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.20);
     position: relative;
     @include flexbox-center();
-    height: 60px;
+    height: 80px;
     width: 100%;
     &__logo {
         font-family: 'Shrikhand', cursive;
@@ -55,54 +100,42 @@ a {
         color: black;
     }
 }
-/*nav*/
+
+.lieu {
+    @include flexbox-center();
+    background: #f3f3f3;
+    color: #7a7a7a;
+
+    &__ville {
+        margin-left: 13px;
+        font-weight: 400;
+    }
+}   
+
+
 .reserver {
-    .fixIcon {
-        margin-right: 18px;
-    }
-    background-color: rgb(247, 245, 245);
-    height: 350px;
-    width: auto;
-    margin-top: 10px;
-    .lieu {
-        background-color: rgb(226, 226, 226);
-        height: 55px;
-        width: auto;
+    background: #fafafa;
+    width: 100%;
+    &__container {
+        width: 100%;
+        padding: 20px;
         @include flexbox-center();
-        margin-top: -9px;
-        border-top: transparent;
+        flex-direction: column;
+        padding: 50px 0;
     }
-    .titreReserver {
-        width: 230px;
-        margin-left: 20%;
+    &__titre {
         text-align: center;
-        font-weight: 900;
+        max-width: 250px;
+        margin: 0;
     }
-    .titreDecouvrez {
+    &__texte {
         text-align: center;
-        width: 350px;
-        font-weight: 1;
-        font-size: 20px;
-        margin-left: 7%;
     }
-    .btnExplorer {
-        width: 250px;
-        height: 60px;
-        background: $gradient;
-        margin-left: 18%;
-        margin-top: 10%;
-        border-radius: 35px;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-        opacity: 1;
+    &__boutton {
+        @include button-style;
         &:hover {
             @include button-hover;
         }
-    }
-    .TextBtnExplorer {
-        color: white;
-        font-size: 18px;
-        height: 60px;
-        @include flexbox-center();
     }
 }
 /* fonctionnement*/
@@ -206,7 +239,8 @@ a {
             & > img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
                 border-radius: 20px 20px 0 0;
             }
         }

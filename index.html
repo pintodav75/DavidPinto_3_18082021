@@ -13,7 +13,15 @@
 </head>
 
 <body>
-  
+  <!-- Page loader -->
+  <div class="loadercenter">
+  <div class="lds-facebook">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  </div>
+  <!-- Logo -->
   <header>
     <div class="header">
       <a href="index.html">
@@ -21,17 +29,28 @@
       </a>
     </div>
   </header>
-  <main>
-    <nav class="reserver">
-      <div class="lieu">
-        <i class="fixIcon fas fa-map-marker-alt "></i><span class="bold">Paris, Belleville</span>
+
+  <!-- Localisation -->
+  <main class="main">
+    <div class="lieu">
+      <div class="lieu__icon">
+        <i class="fas fa-map-marker-alt"></i>
       </div>
-      <h1 class="titreReserver">Réservez le menu qui vous convient</h1>
-      <h2 class="titreDecouvrez">Découvrez des restaurants d'exception, séléctionnés par nos soins.</h2>
-      <div class="btnExplorer">
-        <span class="TextBtnExplorer">Explorer nos restaurants</span>
+      <div class="lieu__ville">
+        <p>Paris, Belleville</p>
       </div>
-    </nav>
+    </div>
+
+    <!-- reserver section -->
+    <section class="reserver">
+      <div class="reserver__container">
+        <h2 class="reserver__titre">Réservez le menu qui vous convient</h2>
+        <p class="reserver__texte">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+        <div class="reserver__boutton">
+          <p>Explorer nos restaurants</p>
+        </div>
+      </div>
+    </section>
     <section class="fonctionnement">
       <div class="process">
         <h2 class="process__title">Fonctionnement</h2>

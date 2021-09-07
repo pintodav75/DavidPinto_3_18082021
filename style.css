@@ -30,6 +30,47 @@ a {
 }
 
 /*spinner*/
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: black;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
 /*header*/
 .header {
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
@@ -37,7 +78,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 80px;
   width: 100%;
 }
 .header__logo {
@@ -46,62 +87,52 @@ a {
   color: black;
 }
 
-/*nav*/
-.reserver {
-  background-color: #f7f5f5;
-  height: 350px;
-  width: auto;
-  margin-top: 10px;
-}
-.reserver .fixIcon {
-  margin-right: 18px;
-}
-.reserver .lieu {
-  background-color: #e2e2e2;
-  height: 55px;
-  width: auto;
+.lieu {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -9px;
-  border-top: transparent;
+  background: #f3f3f3;
+  color: #7a7a7a;
 }
-.reserver .titreReserver {
-  width: 230px;
-  margin-left: 20%;
+.lieu__ville {
+  margin-left: 13px;
+  font-weight: 400;
+}
+
+.reserver {
+  background: #fafafa;
+  width: 100%;
+}
+.reserver__container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+}
+.reserver__titre {
   text-align: center;
-  font-weight: 900;
+  max-width: 250px;
+  margin: 0;
 }
-.reserver .titreDecouvrez {
+.reserver__texte {
   text-align: center;
-  width: 350px;
-  font-weight: 1;
-  font-size: 20px;
-  margin-left: 7%;
 }
-.reserver .btnExplorer {
-  width: 250px;
-  height: 60px;
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  margin-left: 18%;
-  margin-top: 10%;
-  border-radius: 35px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+.reserver__boutton {
   opacity: 1;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  color: white;
+  padding: 0 20px;
+  border-radius: 200px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
-.reserver .btnExplorer:hover {
+.reserver__boutton:hover {
   opacity: 0.8;
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
-}
-.reserver .TextBtnExplorer {
-  color: white;
-  font-size: 18px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* fonctionnement*/
@@ -219,6 +250,7 @@ a {
 .restaurant__carte-image > img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
