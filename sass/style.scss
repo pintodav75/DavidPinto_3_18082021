@@ -50,43 +50,67 @@ a {
     font-weight: bold;
 }
 /*spinner*/
-.lds-facebook {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  .lds-facebook div {
-    display: inline-block;
-    position: absolute;
-    left: 8px;
-    width: 16px;
-    background: black;
-    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-  }
-  .lds-facebook div:nth-child(1) {
-    left: 8px;
-    animation-delay: -0.24s;
-  }
-  .lds-facebook div:nth-child(2) {
-    left: 32px;
-    animation-delay: -0.12s;
-  }
-  .lds-facebook div:nth-child(3) {
-    left: 56px;
-    animation-delay: 0;
-  }
-  @keyframes lds-facebook {
+.spinner {
+    height: 100%;
+    background: white;
+    margin: auto;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 20;
+    animation: spinner 2s linear ;
+    visibility: hidden;
+    &__border {
+        @include flexbox-center;
+        border: 10px solid transparent;
+        border-top: 10px solid $couleurPrimaire;
+        border-bottom: 10px solid $couleurSecondaire;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        animation: spinner-border 2s linear ;
+        z-index: 10;
+        visibility: hidden;
+    }
+    &__center {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $couleurTertiaire;
+    
+    }
+}
+ 
+@keyframes spinner {
     0% {
-      top: 8px;
-      height: 64px;
+        visibility: visible;
+        opacity: 0.9;
     }
-    50%, 100% {
-      top: 24px;
-      height: 32px;
+    70% {
+        opacity: 0.9;
     }
-  }
-  
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes spinner-border {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
 /*header*/
 .header {
     box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.20);
