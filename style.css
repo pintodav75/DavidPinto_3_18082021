@@ -43,13 +43,13 @@ a {
   animation: spinner 2s linear;
   visibility: hidden;
 }
-.spinner__border {
+.spinner__exter {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 10px solid transparent;
   border-top: 10px solid #9356DC;
-  border-bottom: 10px solid #FF79DA;
+  border-bottom: 10px solid #9356DC;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -59,15 +59,29 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  animation: spinner-border 2s linear;
+  animation: spinner-exter 2s linear;
   z-index: 10;
   visibility: hidden;
 }
 .spinner__center {
-  width: 15px;
-  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid transparent;
+  border-right: 8px solid #9356DC;
+  border-left: 8px solid #9356DC;
   border-radius: 50%;
-  background-color: #99E2D0;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: spinner-center 2s linear;
+  z-index: 10;
+  visibility: hidden;
 }
 
 @keyframes spinner {
@@ -83,7 +97,7 @@ a {
     visibility: hidden;
   }
 }
-@keyframes spinner-border {
+@keyframes spinner-exter {
   0% {
     visibility: visible;
     opacity: 1;
@@ -93,6 +107,19 @@ a {
   }
   100% {
     transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes spinner-center {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
     visibility: hidden;
   }
@@ -197,7 +224,7 @@ a {
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
-  background: white;
+  background: #e4d5f6;
 }
 .process__number {
   background-color: #9356DC;
