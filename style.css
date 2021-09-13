@@ -395,4 +395,35 @@ a {
   font-weight: 400;
 }
 
+/*Respomsive*/
+@media screen and (min-width: 800px) {
+  .restaurant__cartes {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+  }
+
+  .process__step {
+    width: 100%;
+  }
+
+  .process__steps {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .footer__bloc {
+    margin-bottom: 15px;
+  }
+  .footer__bloc-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 900px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
