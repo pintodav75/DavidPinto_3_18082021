@@ -320,4 +320,16 @@ header .header__logo a {
   font-weight: 400;
 }
 
+@media screen and (min-width: 1100px) {
+  .footer__bloc {
+    margin-bottom: 15px;
+  }
+  .footer__bloc-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 900px;
+  }
+}
+
 /*# sourceMappingURL=menu.css.map */
