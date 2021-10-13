@@ -20,9 +20,9 @@
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);  
 }
 
-$couleurPrimaire: #9356DC;
-$couleurSecondaire: #FF79DA;
-$couleurTertiaire: #99E2D0;
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
 $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
 
 body {
@@ -163,17 +163,17 @@ header {
             box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
             &:hover .validation__box {
                 @include flexbox-center;
-                animation: slide-left 0.5s ease ;
+                animation: slide-left 0.5s ease;
                 transform-origin: right;
             }
             &:hover .menu__case__price {
                 padding-right: 70px;
-                transition: 0.5s ease ;
+                transition: 0.5s ease;
             }
             .validation__box {
                 display: none;
                 position: absolute;
-                background: $couleurTertiaire;
+                background: $color-tertiary;
                 border-radius: 0 15px 15px 0;
                 right: 0px;
                 padding: 0 13px;
@@ -248,7 +248,7 @@ header {
               transform: scaleX(0);
     }
     100% {
-        transform: scaleX(1);
+              transform: scaleX(1);
     }
   }
   
@@ -345,6 +345,17 @@ header {
 }
 
 @media screen and (min-width: 1100px) {
+    .menu {
+        margin-top: -60px;
+    }
+    .menu__grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr;
+    }
+    .img__image {
+            margin-top: 0;
+        }
         .footer {
             &__bloc {
                 margin-bottom: 15px;
